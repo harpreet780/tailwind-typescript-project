@@ -37,7 +37,6 @@ body {
 }
 
 .banner-section {
-  margin-top: 15px;
   background-image: url('/static/images/TornEdge-Divider.svg'),
                     url('/static/images/Desktop.png'),
                     url('/static/images/Dektop_TL.png'),

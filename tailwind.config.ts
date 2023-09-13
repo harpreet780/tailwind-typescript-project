@@ -46,7 +46,7 @@ const config: Config = {
       facebook: "#3C5A99",
       twitter: "#60A9DC",
       linkedin: "#016699",
-      yellow: "#FFC200"
+      yellow: "#FFC200",
     },
     fontSize: {
       xx: "12px",
