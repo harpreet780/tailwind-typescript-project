@@ -1,0 +1,186 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@font-face {
+  font-family: 'Charlie Text';
+  src: url('https://your-cdn-url.com/charlie-text.woff2') format('woff2'),
+       url('https://your-cdn-url.com/charlie-text.woff') format('woff');
+
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: #fff;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+.borderContent {
+  border-left: 1px solid #dfe1e5;
+  height: 24px;
+  margin: 10px;
+}
+
+.banner-section {
+  margin-top: 15px;
+  background-image: url('/static/images/TornEdge-Divider.svg'),
+                    url('/static/images/Desktop.png'),
+                    url('/static/images/Dektop_TL.png'),
+                    url('/static/images/Desktop_TR.png'),
+                    url('/static/images/Desktop_BR.png'),
+    linear-gradient(180deg, rgba(0, 72, 141, 1) 0%, rgba(0, 103, 255, 1) 99%, rgba(255, 255, 255, 1) 100%);
+  background-position: center bottom, left bottom, left top, right top, right bottom 1px, center;
+  min-height: 648px;
+  background-size: 100% auto, 340px 358px, 510px 342px, 465px 353px, 325px 336px, auto;
+  background-repeat: no-repeat;
+}
+
+.container-sm {
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.container-medium {
+  max-width: 1400px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.linear {
+  background: linear-gradient(180deg, rgba(251, 251, 251, 0) 0.05%, #DEEBFF 99.95%);
+}
+
+.card-shadow {
+  box-shadow: 1px 1px 6px rgb(0, 0, 0, 0.1);
+  transition: 0.5s linear;
+}
+.hover-child-link:hover svg {
+  transform: translate3d(5px, 0, 0);
+}
+
+.card-shadow:hover {
+  box-shadow: 0 4px 12px rgb(0, 0, 0, 0.25);
+}
+.workCard-onHover:hover .work-wrap {
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgb(0, 0, 0, 0.1);
+  transition: 0.2s linear;
+}
+
+.dribble-dropdown a::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  top: 8px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #091e42;
+  right: -18px;
+}
+.ReactModal__Body--open {
+  overflow: hidden;
+}
+.ReactModal__Overlay  {
+  background-color: rgba(0,0,0,.75) !important;
+}
+#custom-video {
+  background-color: transparent !important;
+  border: 0 !important;
+  overflow: hidden !important;
+  padding: 0 35px 0 0 !important;
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%);
+}
+.video-stream  {
+  width: 100% !important;
+  width: 100% !important;
+}
+
+.carrer-bg {
+  background-image: url('/static/images/CareersLeft.svg'),
+    url('/static/images/CareersRight.svg');
+}
+
+@media only screen and (min-width: 1440px) {
+  .carrer-bg {
+    background-position: bottom left, bottom right;
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain, contain;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+  .carrer-bg {
+    background-position: bottom left -110px, bottom right -150px;
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain, contain;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .carrer-bg {
+    background-position: bottom left -175px, bottom right -175px;
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain, contain;
+  }
+  .banner-section {
+    background-position: center bottom , left bottom , left top , right top , right bottom 1px , center;
+    background-repeat: no-repeat , no-repeat , no-repeat , no-repeat , no-repeat , no-repeat;
+    background-size: contain , 224px 236px , 330px 221px , 305px 231px , 215px 222px , auto
+  }
+  #custom-video {
+    width: 100%;
+    padding: 35px 20px !important;
+    height: 576px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  #custom-video {
+    width: 1024px;
+    height: 576px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .carrer-bg {
+    background-image: unset;
+  }
+  #custom-video {
+    width: 100%;
+    padding: 35px 20px !important;
+    height: 385px;
+  }
+  .banner-section {
+    min-height: 690px;
+    background-image: url('/static/images/TornEdge-Divider.svg'),
+                      url('/static/images/Desktop.png'),
+                      url('/static/images/Dektop_TL.png'),
+                      url('/static/images/Desktop_BR.png'),
+    linear-gradient(180deg, rgba(0, 72, 141, 1) 0%, rgba(0, 103, 255, 1) 99%, rgba(255, 255, 255, 1) 100%);
+    background-size: 100% auto, 236px 280px, 100% 33%, 56% 32%, auto;
+    background-position: center bottom , left bottom , right top , right bottom 1px , center;
+    background-repeat: no-repeat , no-repeat , no-repeat , no-repeat , no-repeat , no-repeat;
+  }
+}
+@media only screen and (max-width: 520px) {
+  #custom-video {
+    height: 335px;
+  }
+}
